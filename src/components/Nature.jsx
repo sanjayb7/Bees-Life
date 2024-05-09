@@ -131,7 +131,7 @@ We have a wide range of beverages!`,
           -1050
         ),
         title: "Movies",
-        subtitle: `We provide a large selection of medias, we highly recommend you Porco Rosso during the flight`,
+        subtitle: `helloo welcome to my world`,
       },
       {
         cameraRailDist: 1.5,
