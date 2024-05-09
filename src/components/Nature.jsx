@@ -8,9 +8,11 @@ import { Tulip } from "./Tulip";
 import { Stone } from "./Stone";
 import { Bark } from "./Bark";
 import { Daisy } from "./Daisy";
+import { Tree } from "./Tree";
 import { TextSection } from "./TextSection";
 import { fadeOnBeforeCompile } from "../utils/fadeMaterial";
 import { useNavigate } from 'react-router-dom'; 
+
 
 
 const Link = ({ sceneOpacity,url, children, ...props }) => {
@@ -86,22 +88,21 @@ export const Nature = () => {
     return [
       {
         cameraRailDist: -1,
-        position: new THREE.Vector3(0, 1, -150),
-        subtitle: `Welcome to My Life,
-Have a seat and enjoy the ride!`,
+        position: new THREE.Vector3(-3, 1, -100),
+        subtitle: `Morning Mission,
+        Her day begins with a vital mission: to find pollen and nectar to feed her colony.`,
       },
       {
         cameraRailDist: 1.5,
-        position: new THREE.Vector3(4, 1, -300),
-        title: "Services",
-        subtitle: `Do you want a drink?
-We have a wide range of beverages!`,
+        position: new THREE.Vector3(1.5, 1, -300),
+        title: "A Flower's Gift",
+        subtitle: `She collects nectar with her long, tube-like tongue, while pollen sticks to her fuzzy body.`,
       },
       {
         cameraRailDist: -1,
-        position: new THREE.Vector3(linePoints[3].x - 3, linePoints[3].y, -450),
-        title: "Fear of flying?",
-        subtitle: `Our flight attendants will help you have a great journey`,
+        position: new THREE.Vector3(-2, 1,-450),
+        title: "Dance of Directions",
+        subtitle: `They dance, wiggling and turning to share information about the best foraging spots they've discovered.`,
       },
       {
         cameraRailDist: 1.5,
@@ -110,18 +111,14 @@ We have a wide range of beverages!`,
           linePoints[4].y,
           -750
         ),
-        title: "Movies",
-        subtitle: `We provide a large selection of medias, we highly recommend you Porco Rosso during the flight`,
+        title: "Harvesting Duties",
+        subtitle: `By noon, her legs heavy with pollen, Bella returns to the hive`,
       },
       {
         cameraRailDist: 1.5,
-        position: new THREE.Vector3(
-          linePoints[4].x + 3.5,
-          linePoints[4].y,
-          -900
-        ),
-        title: "Movies",
-        subtitle: `We provide a large selection of medias, we highly recommend you Porco Rosso during the flight`,
+        position: new THREE.Vector3( 0,1,-900),
+        title: "The Hive's Hustle",
+        subtitle: ` In the hive, Bella deposits her pollen into the honeycomb.`,
       },
       {
         cameraRailDist: 1.5,
@@ -130,8 +127,8 @@ We have a wide range of beverages!`,
           linePoints[4].y,
           -1050
         ),
-        title: "Movies",
-        subtitle: `helloo welcome to my world`,
+        title: "Evening Reflections",
+        subtitle: `As the sun sets, Bella takes a final flight, savoring the cool evening breeze`,
       },
       {
         cameraRailDist: 1.5,
@@ -140,8 +137,8 @@ We have a wide range of beverages!`,
           0,
           -1200
         ),
-        title: "Support Us",
-        subtitle: `Click the circle to show us some support, we need you badly!!`,
+        title: "A Call for Action",
+        subtitle: ` Yet, despite her hard work, Bella’s world is changing. Click the circle to show some support`,
       },
     ];
   }, []);
@@ -313,51 +310,57 @@ We have a wide range of beverages!`,
       {/* Flowers */}
       <Tulip
         sceneOpacity={sceneOpacity}
-        scale={[1, 1, 1]}
-        position={[10, 5, -1]}
+        scale={[3, 3, 3]}
+        position={[2, -1, -10]}
       />
       <Stone
         sceneOpacity={sceneOpacity}
-        scale={[4, 4, 4]}
+        scale={[8, 8, 8]}
         rotation-y={Math.PI / 9}
-        position={[2, -1, -12]}
+        position={[-2, -2, -120]}
       />
       <Tulip
         sceneOpacity={sceneOpacity}
         scale={[2, 2, 2]}
-        position={[0, -0.5, -25]}
+        position={[2, -1, -220]}
       />
       <Bark
         sceneOpacity={sceneOpacity}
         scale={[10, 10, 10]}
-        position={[-5, -2, -120]}
+        position={[-5, -2, -350]}
       />
       <Daisy
         sceneOpacity={sceneOpacity}
         scale={[5, 5, 5]}
-        position={[2.5, -2, -90]}
+        position={[2, -2, -420]}
       />
       <Stone
         sceneOpacity={sceneOpacity}
         scale={[4, 4, 4]}
         rotation-y={Math.PI / 9}
-        position={[5, -1.5, -120]}
+        position={[5, -1.5, -550]}
       />
       <Daisy
         sceneOpacity={sceneOpacity}
         scale={[4, 4, 4]}
-        position={[2.5, -2, -150]}
+        position={[2.5, -2, -650]}
       />
       <Tulip
         sceneOpacity={sceneOpacity}
         scale={[2, 2, 2]}
-        position={[2, -1, -80]}
+        position={[2, -1, -750]}
       />
       <Stone
         sceneOpacity={sceneOpacity}
         scale={[4, 4, 4]}
         rotation-y={Math.PI / 9}
-        position={[2, -2, -85]}
+        position={[2, -2, -850]}
+      />
+      <Tree
+        sceneOpacity={sceneOpacity}
+        scale={[4, 4, 4]}
+        rotation-y={Math.PI / 9}
+        position={[2,-2, -850]}
       />
       <Link sceneOpacity={sceneOpacity} url="/form" position={[0, 0, -1200]}>
         Click me!
